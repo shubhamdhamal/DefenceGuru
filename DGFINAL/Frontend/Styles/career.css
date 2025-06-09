@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Container Styling */
+.form-container {
+    margin: 80px auto;
+    width: 100%;
+    max-width: 500px; /* Keep this size for mobile and tablets */
+    padding: 25px;
+    background-color: #ffffff;
+    background: linear-gradient(135deg, #a7969771, #bbb04e94);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
+}
+
+h2 {
+    font-size: 24px;
+    color: #0b5031;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #0b5031;
+    outline: none;
+    box-shadow: 0 0 8px rgba(11, 80, 49, 0.5); 
+}
+
+/* Flex Row for Input Fields */
+.flex-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flex-row input,
+.flex-row select {
+    flex: 1 1 45%;
+    min-width: 100%;
+}
+
+/* Domain and Relocate Options Styling */
+.domain-options,
+.relocate-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.domain,
+.relocate-option {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 14px;
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.domain:hover,
+.relocate-option:hover {
+    background-color: #d0d0d0;
+}
+
+.domain.active,
+.relocate-option.active {
+    background-color: #0b5031;
+    color: white;
+}
+
+/* Button Styling */
+button {
+    background-color: #0b5031;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #093d25;
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+/* Terms Link Styling */
+.terms-link {
+    color: #0b5031;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        max-width: 400px; /* Reduce form width on tablets */
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 14px;
+    }
+
+    .domain,
+    .relocate-option {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .flex-row input,
+    .flex-row select {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Responsive Design for Small Mobile Screens */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 60px;
+        max-width: 90%; /* Full width for smaller screens */
+    }
+
+    h2 {
+        font-size: 18px; /* Smaller font size on mobile */
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 12px; /* Smaller font size on mobile */
+    }
+
+    .domain,
+    .relocate-option {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Laptop View Adjustments */
+@media (min-width: 769px) {
+    .form-container {
+        max-width: 600px; /* Set larger max-width for laptop screens */
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 28px; /* Larger font size for laptops */
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 16px; /* Adjust font size for laptop screens */
+    }
+
+    button {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .flex-row input,
+    .flex-row select {
+        flex: 1 1 45%; /* Adjust for better spacing on large screens */
+    }
+
+    .domain,
+    .relocate-option {
+        font-size: 16px; /* Larger font size for better visibility */
+        padding: 12px;
+    }
+}
