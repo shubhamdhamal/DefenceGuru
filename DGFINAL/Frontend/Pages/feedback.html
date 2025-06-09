@@ -341,7 +341,7 @@
     formData.append('rating', rating);
 
     try {
-      const res = await fetch('http://localhost:5000/api/testimonials', {
+      const res = await fetch('https://defenceguru.onrender.com/api/testimonials', {
         method: 'POST',
         body: formData,
       });
@@ -397,14 +397,14 @@
   // Load testimonials from server and display them
   window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const res = await fetch('http://localhost:5000/api/testimonials');
+    const res = await fetch('https://defenceguru.onrender.com/api/testimonials');
     const testimonials = await res.json();
 
     testimonials.forEach(t => {
       // Ensure backend stores only the filename (not full path)
       // Then this will correctly load image from /uploads/<filename>
       const imageURL = t.image
-        ? `http://localhost:5000/${t.image}` // served by express.static('uploads')
+        ? `https://defenceguru.onrender.com/${t.image}` // served by express.static('uploads')
         : '../Assests/default-profile.png'; // fallback if no image
 
       const cardHTML = `
